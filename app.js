@@ -56,4 +56,4 @@ MongoClient.connect(mongourl,(err,client)=>{
     db=client.db('eduaug')
     app.listen(port,()=>console.log(`listening to port number ${port}`))
 })
-const port=8100;
+const port=process.env.PORT||8100;
